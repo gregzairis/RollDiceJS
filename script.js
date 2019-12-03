@@ -7,13 +7,15 @@ GAME RULES:
 - The first player to reach 100 points on GLOBAL score wins the game
 */
 
-var scores = [0, 0];
-var roundScore = 0;
-var activePlayer = 0;
+var scores,roundScore,activePlayer;
+
+init();
+
 
 function init() {
-    scores[0] = 0;
-    screen[1] = 0;
+    scores[0,1] = 0;
+    activePlayer=0;
+    roundScore=0;
     document.querySelector('.dice').style.display = 'none';
     document.getElementById('score-0').textContent = 0;
     document.getElementById('score-1').textContent = 0;
@@ -28,7 +30,7 @@ function init() {
 
 }
 
-init();
+
 
 
 document.querySelector('.btn-new').addEventListener('click', init);
